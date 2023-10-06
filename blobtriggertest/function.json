@@ -6,7 +6,7 @@
       "type": "blobTrigger",
       "direction": "in",
       "path": "blobtrigger/{name}",
-      "connection": "challengemodel_STORAGE"
+      "connection": "funcdemo_STORAGE"
     }
   ]
 }
