@@ -3,3 +3,8 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
+azure-storage-blob
+pandas 
+numpy
+python-dateutil
+
