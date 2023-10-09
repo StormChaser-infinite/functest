@@ -14,7 +14,7 @@ def clean_df(df):
                  'NextRepaymentDate','InterestRateEffectDateAlteration1','InterestRateEffectDateAlteration2','InterestRateEffectDateAlteration3']
     
     for i in date_cols:
-        df[i] = pd.to_datetime(df[i], errors= 'coerce',format= '%d/%m/%Y')
+        df[i] = pd.to_datetime(df[i], errors= 'coerce',format= '%Y-%m-%d')
     
     df = df.reset_index()
     df = df.rename(columns= {'index': 'EventID', 'EventID': 'EventID_Orig'})
