@@ -7,7 +7,7 @@ import datetime as dt
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 import math
-import os
+#import os
 
 def clean_df(df):
     """clean the columns of original dataframe into correct data types"""
@@ -220,7 +220,7 @@ def clac_rates(df_period, inputdata):
 def export_ouput(df_output):
     '''export the results into the outputs container'''
     output = df_output.to_csv()
-    blobService = ContainerClient(account_url = os.environ.get("stroage_account_url"), 
+    blobService = ContainerClient(account_url = "https://funcdemo.blob.core.windows.net", 
                                    credential= "e4MRGQUsGoQLwqIQw2pw5fEVSonqVoSpMJV1X0QSZ6gaYmXTaE6aLdz4n6a8BD18wmRa/qbSsU5I+AStB1JRKg==",
                                    container_name = "outputs")
     file_name = 'mrc_calculation' + dt.date.today().strftime("%Y%m%d") + '.csv'
